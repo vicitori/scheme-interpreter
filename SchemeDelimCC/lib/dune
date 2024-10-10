@@ -1,0 +1,9 @@
+(library
+ (name scheme_lib)
+ (public_name SchemeDelimCC.Lib)
+ (modules Ast)
+ (modules_without_implementation Ast)
+ (preprocess
+  (pps ppx_deriving.show))
+ (instrumentation
+  (backend bisect_ppx)))
